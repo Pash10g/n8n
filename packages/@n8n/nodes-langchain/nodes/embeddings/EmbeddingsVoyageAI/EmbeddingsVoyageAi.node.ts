@@ -63,31 +63,31 @@ export class EmbeddingsVoyageAi implements INodeType {
 				default: 'voyage-3.5',
 				options: [
 					{
-						name: 'Voyage-3.5 (1024 (default), 256, 512, 2048)',
-						value: 'voyage-3.5',
-					},
-					{
-						name: 'Voyage-3-large (2048, 1024 (default), 512, 256 dimensions)',
+						name: 'Voyage-3-Large (2048, 1024 (Default), 512, 256 Dimensions)',
 						value: 'voyage-3-large',
 					},
 					{
-						name: 'Voyage-3.5-lite (1024 (default), 256, 512, 2048 dimensions)',
+						name: 'Voyage-3.5 (1024 (Default), 256, 512, 2048)',
+						value: 'voyage-3.5',
+					},
+					{
+						name: 'Voyage-3.5-Lite (1024 (Default), 256, 512, 2048 Dimensions)',
 						value: 'voyage-3.5-lite',
 					},
 					{
-						name: 'voyage-code-3  (1024 (default), 256, 512, 2048 dimensions)',
-						value: 'voyage-code-3',
-					},
-					{
-						name: 'Voyage-finance-2 (1024 dimensions)',
-						value: 'voyage-finance-2',
-					},
-					{
-						name: 'Voyage-code-2 (1536 dimensions)',
+						name: 'Voyage-Code-2 (1536 Dimensions)',
 						value: 'voyage-code-2',
 					},
 					{
-						name: 'Voyage-law-2 (1024 dimensions)',
+						name: 'Voyage-Code-3 (1024 (Default), 256, 512, 2048 Dimensions)',
+						value: 'voyage-code-3',
+					},
+					{
+						name: 'Voyage-Finance-2 (1024 Dimensions)',
+						value: 'voyage-finance-2',
+					},
+					{
+						name: 'Voyage-Law-2 (1024 Dimensions)',
 						value: 'voyage-law-2',
 					},
 				],
@@ -220,7 +220,7 @@ export class EmbeddingsVoyageAi implements INodeType {
 
 		const embeddings = new VoyageEmbeddings({
 			apiKey: credentials.apiKey as string,
-			modelName: modelName,
+			modelName,
 			inputType: inputType || undefined,
 			...options,
 		});
